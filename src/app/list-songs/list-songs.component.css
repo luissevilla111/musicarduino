@@ -1,0 +1,126 @@
+#myVideo {
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+.conte-cards{
+  width: 90%;
+  margin: 10px auto 0 auto;
+
+}
+
+
+
+@media (min-width: 768px){
+  .conte-cards{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 10px;
+  }
+}
+
+@media (min-width: 992px){
+  .conte-cards{
+
+    grid-template-columns: repeat(3,1fr);
+
+  }
+}
+
+
+.conte-cards .card{
+  background-color: #FFFCF9;
+  /* padding: 10px 0; */
+  text-align: center;
+  height: 450px;
+  position: relative;
+  max-width: 400px;
+  margin-top: 10px;
+  -webkit-box-shadow: -8px 1px 29px -3px rgba(0,0,0,0.75);
+-moz-box-shadow: -8px 1px 29px -3px rgba(0,0,0,0.75);
+box-shadow: -8px 1px 29px -3px rgba(0,0,0,0.75);
+
+}
+.conte-cards .card:hover > .circle{
+  clip-path: circle(70% at 50% 100%);
+}
+/* .conte-cards .card:hover >  .h2 h2{
+  color: var(--greenme);
+} */
+
+.conte-cards .card:hover > .content button{
+  background-color: #FFFCF9;
+  /* color: var(--greenme); */
+}
+
+.conte-cards .card .circle{
+  /* background-color: var(--greenme); */
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  clip-path: circle(50% at 50% 0);
+  transition: all .3s ease-in-out;
+}
+.conte-cards .card .h2{
+  margin: 0;
+  color: white;
+  padding: 20px 0 0 0;
+
+  position: absolute;
+  z-index: 1;
+  text-align: center;
+  width: 90%;
+  left: 5%
+}
+.conte-cards .card .h2 h2{
+  margin: 0 0 0 0;
+  padding: 0;
+  font-size: 40px;
+}
+.conte-cards .card .content {
+  width: 90%;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 20px;
+  left: 5%;
+  /* transform: translate(-50%, -50%); */
+
+}
+.conte-cards .card button{
+  display: block;
+  margin: 0 auto;
+}
+
+.card:nth-child(3n +1) .circle,.card:nth-child(3n +1) button{
+  background: var(--greenme);
+}
+.card:nth-child(3n +2) .circle,.card:nth-child(3n +2) button{
+  background: var(--yellowme);
+}
+.card:nth-child(3n +3) .circle,.card:nth-child(3n +3) button{
+  background: var(--redme);
+}
+
+.conte-cards .card:hover:nth-child(3n +1) >  .h2 h2{
+  color: var(--greenme);
+}
+.conte-cards .card:hover:nth-child(3n +2) >  .h2 h2{
+  color: var(--yellowme);
+}
+.conte-cards .card:hover:nth-child(3n +3) >  .h2 h2{
+  color: var(--redme);
+}
+
+.conte-cards .card:hover:nth-child(3n +1) > .content button{
+  color: var(--greenme);
+}
+.conte-cards .card:hover:nth-child(3n +2) > .content button{
+  color: var(--yellowme);
+}
+.conte-cards .card:hover:nth-child(3n +3) > .content button{
+  color: var(--redme);
+}

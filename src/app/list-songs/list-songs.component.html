@@ -1,0 +1,27 @@
+<!-- <video  muted loop  id="myVideo">
+  <source src="../../assets/video/mario.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video> -->
+
+<section class="conte-cards">
+  <div class="card" *ngFor="let songInfo of songList;let i = index">
+    <div class="h2">
+      <h2>{{songInfo.id}} {{songInfo.name}}</h2>
+    </div>
+
+    <div class="circle">
+      <!-- <h2>01</h2> -->
+    </div>
+    <div class="content">
+      <p>
+        {{songInfo.desc}}
+      </p>
+      <button class="button " (click)="sendSong(songInfo.id)" style="z-index: 3;">Play</button>
+    </div>
+
+
+
+  </div>
+
+
+</section>
